@@ -31,12 +31,13 @@ export default {
             axios.get('https://flynn.boolean.careers/exercises/api/array/music')
             .then( r => {
                 console.log(r);
-                console.log(r.data);
-                console.log(r.data.response);
+                this.musics= r.data.response;
+                
             })
-            .error( e => {
+            .catch( e => {
                 console.log(e);
-            })
+            });
+            console.log('DENTRO GETAPI');
         },
        
     },

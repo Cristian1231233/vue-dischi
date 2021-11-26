@@ -1,6 +1,6 @@
 <template>
-  <div class="col-2 text-center">
-      <div class="image-text">
+  <div class="col-3 text-center">
+      <div class="image-text my-2">
           <div class="image">
               <img :src="music.poster" alt="">
           </div>
@@ -30,7 +30,8 @@ export default {
 
  .image-text{
      background-color: $color-gray;
-     border: 1px solid black;
+     padding: 10px;
+     width: 150px;
      .image{
          margin: 10px auto;
          width: 100px;
@@ -45,6 +46,9 @@ export default {
      }
      .titolo, .anno{
          color: #697276;
+     }
+     .anno{
+         margin-bottom: 20px;
      }
 
  }
