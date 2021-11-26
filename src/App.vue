@@ -1,28 +1,37 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="princ">
+    <Header />
+    <div class="main-wrapper">
+      <div class="container py-5 text-center">
+        <Listamusic />
+
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// import HelloWorld from './components/HelloWorld.vue'
+   import Header from './components/Header.vue'
+   import Listamusic from './components/Listamusic.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+      Header,
+      Listamusic
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+@import './assets/generals.scss';
+@import './assets/vars.scss';
+.princ{
+    min-height: 100vh;
+    .main-wrapper{
+        background-color: $color-vh;
+        min-height: calc(100vh - 70px);
+     }
 }
 </style>
