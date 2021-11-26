@@ -2,15 +2,15 @@
   <div class="col-2 text-center">
       <div class="image-text">
           <div class="image">
-              <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
+              <img :src="music.poster" alt="">
           </div>
           <div class="text">
-              NEW JERSEY
+              {{music.title}}
           </div>
           <div class="titolo">
-              Bon Jovi
+              {{music.author}}
           </div>
-          <div class="anno">1988</div>
+          <div class="anno">{{music.year}}</div>
       </div>
   </div>
 </template>
@@ -18,7 +18,9 @@
 <script>
 export default {
     nome: 'Music',
-    
+    props:{
+        music: Object
+    } 
 }
 </script>
 
