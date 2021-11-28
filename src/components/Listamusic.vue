@@ -30,7 +30,9 @@ export default {
         getApi(){
             axios.get('https://flynn.boolean.careers/exercises/api/array/music')
             .then( r => {
-                console.log(r);
+                console.log('r',r);
+                console.log('r.data',r.data);
+                console.log('r.data.response',r.data.response);
                 this.musics= r.data.response;
                 
             })

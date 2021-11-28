@@ -1,5 +1,5 @@
 <template>
-  <div class="col-3 text-center">
+  <div class="col-2 text-center">
       <div class="image-text my-2">
           <div class="image">
               <img :src="music.poster" alt="">
@@ -32,8 +32,9 @@ export default {
      background-color: $color-gray;
      padding: 10px;
      width: 150px;
+     height: 250px;
      .image{
-         margin: 10px auto;
+         margin: 7px auto;
          width: 100px;
          height: 100px;
          img{
