@@ -1,6 +1,6 @@
 <template>
   <div class="princ">
-    <Header />
+    <Header @genereSelezionato= 'changeGenre' />
     <div class="main-wrapper">
       <div class="container py-4 text-center">
         <Listamusic />
@@ -16,10 +16,21 @@
    import Listamusic from './components/Listamusic.vue'
 export default {
   name: 'App',
+  data(){
+    return{
+      genereSelezionato: 'all'
+    }
+  },
   components: {
       Header,
       Listamusic
-  }
+  },
+  methods:{
+        changeGenre(selectedGenre){
+            console.log(selectedGenre);
+            this.genereSelezionato = selectedGenre;
+        }
+    }
 }
 </script>
 
