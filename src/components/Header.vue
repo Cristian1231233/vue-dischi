@@ -4,11 +4,11 @@
            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/1024px-Spotify_App_Logo.svg.png" alt="">
       </div>
       <select class="select" v-model="genre" @change="$emit('genereSelezionato', genre)">
-          <option value="all" selected>all</option>
-          <option value="rock">rock</option>
-          <option value="pop">pop</option>
-          <option value="jazz">jazz</option>
-          <option value="metal">dmetal</option>
+          <option value="All" selected>all</option>
+          <option value="Rock">rock</option>
+          <option value="Pop">pop</option>
+          <option value="Jazz">jazz</option>
+          <option value="Metal">metal</option>
   </select>
      
       
@@ -24,7 +24,7 @@ export default {
     data(){
         return{
             genre: 'all'
-        }
+        };
     },
     
     

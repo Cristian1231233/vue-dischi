@@ -1,7 +1,7 @@
 <template>
 <div v-if="loading">
   <div class="row text-center">
-      <Music v-for="(music, index) in musics"
+      <Music v-for="(music, index) in filtroCard"
       :key="index"
       :music="music"
        />
@@ -24,10 +24,13 @@ export default {
         Music,
         Load
     },
+    props: ['genereToSearch'],
     data(){
         return{
             musics: [],
-            loading: false
+            loading: false,
+            
+            
         }
     },
     methods:{
@@ -45,8 +48,22 @@ export default {
             });
             console.log('DENTRO GETAPI');
         },
-       
+    
     },
+       computed:{
+           filtroCard(){
+               if(this.genereToSearch === '' || this.genereToSearch === 'All'){
+                   return this.musics;
+               }
+                return this.musics.filter(music =>{
+                   
+                   return this.genereToSearch === music.genre;
+               })
+            // console.log(this.genereToSearch);
+            // return this.musics
+           }
+           
+       },
      mounted(){
         this.getApi();
     }

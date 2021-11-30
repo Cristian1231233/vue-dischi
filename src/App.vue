@@ -3,7 +3,7 @@
     <Header @genereSelezionato= 'changeGenre' />
     <div class="main-wrapper">
       <div class="container py-4 text-center">
-        <Listamusic />
+        <Listamusic :genereToSearch = "genereSelezionato" />
 
       </div>
     </div>
@@ -18,7 +18,8 @@ export default {
   name: 'App',
   data(){
     return{
-      genereSelezionato: 'all'
+      genereSelezionato: 'All',
+      
     }
   },
   components: {
@@ -27,8 +28,9 @@ export default {
   },
   methods:{
         changeGenre(selectedGenre){
-            console.log(selectedGenre);
+            
             this.genereSelezionato = selectedGenre;
+            
         }
     }
 }
